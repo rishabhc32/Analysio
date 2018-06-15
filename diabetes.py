@@ -31,7 +31,10 @@ def feature_dependence_gradient_boost(X_train, y_test):
     plt.show()
 
 def show_hist(data):
-    data.groupby('Outcome').hist(figsize=(9, 9))
+    new_data = data.groupby('Outcome')
+    new_data.hist(figsize=(9, 9))
+    #data.plot(kind='density', subplots=True, layout=(3,3), figsize=(9, 9),sharex=False)
+    plt.show()
 
 if __name__ == '__main__':
 
@@ -40,6 +43,5 @@ if __name__ == '__main__':
 
     X_train, X_test, y_train, y_test = train_test_split(diabetes.loc[:, diabetes.columns != 'Outcome'], diabetes['Outcome'], stratify=diabetes['Outcome'], random_state=66)
 
-    feature_dependence_tree(X_train, y_train)
-    feature_dependence_gradient_boost(X_train, y_train)
-    
+    #feature_dependence_tree(X_train, y_train)
+    #feature_dependence_gradient_boost(X_train, y_train)
