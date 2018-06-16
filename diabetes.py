@@ -21,20 +21,30 @@ def feature_dependence_tree(X_train, y_train):
     tree.fit(X_train, y_train)
 
     plot_feature_importance_diabetes(tree)
-    plt.show()
+    plt.savefig('feature_tree.png')
+    #plt.show()
 
 def feature_dependence_gradient_boost(X_train, y_test):
     gb = GradientBoostingClassifier(random_state=0, max_depth=1)
     gb.fit(X_train, y_train)
 
     plot_feature_importance_diabetes(gb)
-    plt.show()
+    plt.savefig('feature_gradient_boost.png')
+    #plt.show()
 
 def show_hist(data):
-    new_data = data.groupby('Outcome')
-    new_data.hist(figsize=(9, 9))
+    histogram = data.groupby('Outcome')
+    for attribute in list(data):
+        histogram[attribute].hist(alpha=0.4)
+        plt.savefig('hist{}.png'.format(attribute))
+        plt.clf()
+    
+    #data.groupby('Outcome').hist(figsize=(9,9))
+    #plt.show()
     #data.plot(kind='density', subplots=True, layout=(3,3), figsize=(9, 9),sharex=False)
-    plt.show()
+    #plt.show()
+    #plt.savefig('histogram.png')
+    #plt.savefig('histogram1.png')
 
 if __name__ == '__main__':
 
@@ -43,5 +53,5 @@ if __name__ == '__main__':
 
     X_train, X_test, y_train, y_test = train_test_split(diabetes.loc[:, diabetes.columns != 'Outcome'], diabetes['Outcome'], stratify=diabetes['Outcome'], random_state=66)
 
-    #feature_dependence_tree(X_train, y_train)
-    #feature_dependence_gradient_boost(X_train, y_train)
+    feature_dependence_tree(X_train, y_train)
+    feature_dependence_gradient_boost(X_train, y_train)
