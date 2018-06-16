@@ -7,6 +7,9 @@ exec('python3 diabetes.py', (err, stdout, stderr) => {
 
     if(stdout.includes('Done')) {
         console.log('Done');
+        exec('ls', (err, stdout, stderr) => {
+            console.log(stdout);
+        })
     }
     console.log('stderr: ', stderr);
 })
