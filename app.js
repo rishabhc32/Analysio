@@ -26,7 +26,8 @@ app.get('/', (req, res) => {
 
 app.get('/analyze', (req, res) => {
     analyze();
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/analyze.html');
 })
 
-app.listen(4433, () => console.log('Started server'))
+const newLocal = 4433;
+app.listen(newLocal, () => console.log('Started server'))
