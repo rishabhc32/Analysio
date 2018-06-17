@@ -21,7 +21,7 @@ def feature_dependence_tree(X_train, y_train):
     tree.fit(X_train, y_train)
 
     plot_feature_importance_diabetes(tree)
-    plt.savefig('feature_tree.png')
+    plt.savefig('public/feature_tree.png')
     #plt.show()
 
 def feature_dependence_gradient_boost(X_train, y_test):
@@ -29,14 +29,14 @@ def feature_dependence_gradient_boost(X_train, y_test):
     gb.fit(X_train, y_train)
 
     plot_feature_importance_diabetes(gb)
-    plt.savefig('feature_gradient_boost.png')
+    plt.savefig('public/feature_gradient_boost.png')
     #plt.show()
 
 def show_hist(data):
     histogram = data.groupby('Outcome')
     for attribute in list(data):
         histogram[attribute].hist(alpha=0.4)
-        plt.savefig('hist{}.png'.format(attribute))
+        plt.savefig('public/hist{}.png'.format(attribute))
         plt.clf()
     
     #data.groupby('Outcome').hist(figsize=(9,9))
