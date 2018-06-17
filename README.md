@@ -1,0 +1,3 @@
+# Analysio
+**Analysio** is a platform to enable hospitals process and analyze Hospital Information System(HIS) data. Advent of rapidly increasing medical data in healthcare domain signifies the era of Big Data and Cluster Computing. Wealth of knowledge can be obtained from from highly interdisciplinary nature of medical data. If exploited timely and appropriately, can bring enormous benefits in the form of cost savings, improved healthcare quality, and better productivity. Using Container Orchestration with Big Data analytics we can produce prediction and analytics for patients and hospital which can interoperate with current Hospital System through HL7 FHIR APIs.
+
