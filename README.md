@@ -18,6 +18,9 @@ __Providing prediction and analysis for patients and hospitals using Big Data an
   * Spark’s DataFrame visualization through Plotly.
   * Analytics and plots will be displayed on Hospital/User dashboard_(built with VueJS/MaterializeCSS and NodeJS)_.
 
+## Architecture Diagram
+![architecture diagram](https://raw.githubusercontent.com/rishabhc32/Analysio/master/images/3.png)
+
 ### Use Case
 #### For Patients
 * Integrated view of patient data.
@@ -49,3 +52,8 @@ Demonstration of Docker Swarm cluster running on 2 or 3 laptops. Data is fetched
 
 ### Presentation Link 
 * [Link](https://docs.google.com/presentation/d/1a-4DaWi7JO__eMGBYmP-3m4cmS2OvEXZz_UYzVgPBNY/edit?usp=sharing)
+
+### Screenshots
+![Web interface](https://raw.githubusercontent.com/rishabhc32/Analysio/master/images/1.PNG)
+
+![Mobile View](https://raw.githubusercontent.com/rishabhc32/Analysio/master/images/2.PNG)
