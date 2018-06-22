@@ -57,3 +57,5 @@ Demonstration of Docker Swarm cluster running on 2 or 3 laptops. Data is fetched
 ![Web interface](https://raw.githubusercontent.com/rishabhc32/Analysio/master/images/1.PNG)
 
 ![Mobile View](https://raw.githubusercontent.com/rishabhc32/Analysio/master/images/2.PNG)
+
+![Docker Visualizer](https://raw.githubusercontent.com/rishabhc32/Analysio/master/images/4.png)
